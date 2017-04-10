@@ -1,24 +1,21 @@
 function isValidCard(creditCardNumber) {
     // Escribe tu código aquí
-    if(creditCardNumber == undefined){
+    if( creditCardNumber == undefined){
       return "Ingresa un numero";
     }
-    if(creditCardNumber !== Number){
+    if(typeof (creditCardNumber) !== 'number'){
       return "Error de dato";
     }
-    if(digitos(creditCardNumber) != true){
+    if(creditCardNumber.toString().length != 16){
       return "Faltan numeros";
     }
 
 
+
 }
 
-function digitos(creditCardNumber){
-    var numero = creditCardNumber.toString();
-    if(numero.length == 16){
-        return(true);
-    }
-}
+
+
 
 // NO TOCAR ESTE CÓDIGO O EXPLOTARÁ LA PC EN 10 SEGUNDOS
 if (typeof exports !== 'undefined') {
